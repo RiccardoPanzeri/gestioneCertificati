@@ -4,8 +4,11 @@
 
 int main()
 {
+    
     Data dataInizio;
     Data dataFine;
+    
+    
     dataInizio.giorno = 1;
     dataInizio.mese = 1;
     dataInizio.anno = 2024;

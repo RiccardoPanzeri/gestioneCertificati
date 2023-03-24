@@ -14,9 +14,9 @@ int contaSingoloAnno(Data data1, Data data2){
 	printf("%d\n", totale);
 	for (int i = data1.mese; i < (data2.mese - 1); i++) {//l'indice parte dal mese e non da mese -1, perchè cosi facendo, non aggiungo di nuovo anche il mese di partenza;
 		printf("%d + ", totale);
-		totale += mesi[i];
+		totale += mesi[i];//aggiungo i giorni di ogni mese che sta tra le due date;
 		printf("%d = %d\n", mesi[i], totale);
-		if (i + 1 == 2) {
+		if (i == 2) { //Siccome non conto il mese iniziale nel ciclo for, ora l'indice i e il mese della struct sono in pari: se i == 2, allora corrisponde a febbraio.
 			febbraio = true;//se viene utilizzato il mese di febbraio nell'array, il booleano cambia valore, e so chè il controllo sul bisestile va effettuato.
 		}
 		
