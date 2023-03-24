@@ -22,7 +22,7 @@ int contaSingoloAnno(Data data1, Data data2){
 		
 	}
 	if (febbraio == true) {//se il booleano febbraio è vero, sono sicuro che Febbraio è compreso nel calcolo;
-		if ((data1.mese != 2 && data2.mese != 2) || (data1.mese == 2 && data1.giorno < 29) || (data1.mese == 2 && data2.mese > 2 && data1.giorno < 29) || (data2.mese == 2 && data2.giorno > 28)) {//ho provato a prendere in considerazione anche l'opzione in cui la datache tocca febbraio si fermi prima del 29, o cominci il 29 stesso;
+		if ((data1.mese != 2 && data2.mese != 2) || (data1.mese == 2 && data1.giorno < 29) || (data1.mese == 2 && data2.mese > 2 && data1.giorno < 29) || (data2.mese == 2 && data2.giorno > 28)) {//ho provato a prendere in considerazione anche l'opzione in cui la data che tocca febbraio si fermi prima del 29, o cominci il 29 stesso;
 			if ((data1.anno % 4 == 0  && data1.anno % 100 != 0) || (data1.anno % 4 == 0 && (data1.anno % 100 == 0 && data1.anno % 400 == 0))){//siccome questa funzione prende in esame solo due date con anno uguale, posso verificare che solo l'anno della prima rispetti le condizioni della formula per il bisestile; 
 				totale += 1;
 				printf("%s\n", "l'anno è bisestile");
