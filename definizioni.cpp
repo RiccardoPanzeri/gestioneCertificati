@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include "prototipi.h"
 int contaSingoloAnno(Data data1, Data data2){
-	bool febbraio = false;
+	bool febbraio = false;//variabile booleana che mi serve per controllare se febbraio viene preso in considerazione;
 	int totale = 0;
 	int mesi[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 	if (data1.anno != data2.anno || data1.mese > data2.mese) {
-		return -1;
+		return -1;//se gli anni non coincidono o i mesi sono in un'ordine impossibile, la funzione restituisce -1;
 	}
 	if (data1.mese == data2.mese) {
 		return data2.giorno - data1.giorno;//se le due date hanno lo stesso mese, mi basta una semplice sottrazione tra i giorni;

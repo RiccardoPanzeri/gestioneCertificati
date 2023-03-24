@@ -129,7 +129,6 @@
   <ItemGroup>
     <ClCompile Include="definizioni.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="prototipi.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="prototipi.h" />
